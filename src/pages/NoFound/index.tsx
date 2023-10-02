@@ -3,7 +3,7 @@ function NotFoundPage() {
     <div className="flex justify-center">
       <img
         src="src/assets/images/NoFound/empty.gif"
-        alt="emty"
+        alt="empty"
         className="max-w-xs w-full"
       />
     </div>
