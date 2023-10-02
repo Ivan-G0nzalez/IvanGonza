@@ -1,6 +1,7 @@
 import { INav } from "~/interfaces/nav";
 import { createElement, useState } from "react";
 import { content } from "~/constant/Content";
+import { Link } from "react-router-dom";
 
 interface IProps {
   nav: INav[];
@@ -16,17 +17,17 @@ function NavBar({ changeStateNavbar }: any) {
       }`}
     >
       {nav.map((item, index) => (
-        <a
+        <Link
           // eslint-disable-next-line react/no-array-index-key
           key={index}
-          href={item.link}
+          to={item.link}
           onClick={() => setActive(index)}
           className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
             index === active && "bg-dark_primary text-white"
           }`}
         >
           {createElement(item.icon)}
-        </a>
+        </Link>
       ))}
     </nav>
   );
