@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     port: 8081,
   },
-  base: "/IvanGonzaDev/",
+  base: "/IvanGonza/",
   preview: {
     port: 3000,
   },
