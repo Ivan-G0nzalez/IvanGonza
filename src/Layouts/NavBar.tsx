@@ -17,17 +17,17 @@ function NavBar({ changeStateNavbar }: any) {
       }`}
     >
       {nav.map((item, index) => (
-        <Link
+        <a
           // eslint-disable-next-line react/no-array-index-key
           key={index}
-          to={item.link}
+          href={item.link}
           onClick={() => setActive(index)}
           className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
             index === active && "bg-dark_primary text-white"
           }`}
         >
           {createElement(item.icon)}
-        </Link>
+        </a>
       ))}
     </nav>
   );
